@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+            height: 100vh;
+        }
+
+        .clip{clip-path: polygon(0 0, 0% 100%, 100% 100%);
+            background-color: #384ffe;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top:0;
+            left:0;
+
+        }
+
+        .card{width:350px;
+            max-width: 95%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+             flex-direction: column;
+             -webkit-box-pack: start;
+             -ms-flex-align: center;
+             align-items: center;
+             position: absolute;
+             top: 50%;
+             left:50%;
+             transform: translate(-50%, -50%);
+             background: rgba(255, 255, 255, 0.25);
+             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+             backdrop-filter: blur(4px);
+             border-radius: 10px;
+             border: ipx solid rgba(255, 255, 255, 0.18);
+             padding: 1em;
+
+        }
+
+        input{width:100%;
+            height:3em;
+            border-width: 0;
+            border-radius:8px ;
+            margin-bottom: 1em;
+            padding: 0 0 0 10px;
+            letter-spacing: 1px;
+            font-size: 1em;
+            font-weight: 600
+        
+        }
+         button:focus{outline-color: #384ffe;}
+
+         button{background: #384ffe;
+            width: 100%;
+            border: none;
+            height: 3em;
+            font-size: 1em;
+            font-weight: 600;
+            color:#fff;
+            letter-spacing: 1px;
+            cursor:pointer;
+            border-radius: 8px;
+            transition: all .3s ease-in-out;  
+        }
+
+        button:hover{background-color: #1530ce;}
+
+        .responseContainer{width: 100%;}
+
+        .error{color:red;
+            text-align: left;
+        
+        }
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="clip"></div>
+
+ <div class="card">
+    <input type="email" class="email" placeholder="Email">
+    <input type="password" class="password" placeholder="Password">
+    <button class="register">Register</button>
+
+    <div class="responseContainer">
+        <p class="error"></p>
+        <p class="response"></p>
+    </div>
+</div>
+
+
+
+
+  
+    <script src="./classwork.js"></script>  
+</body>
+</html>
